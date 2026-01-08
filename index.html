@@ -1,0 +1,2018 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Page Not Found - simmingsibs.com">
+    <meta name="author" content="Null">
+    <meta name="creator" content="Y29ybmNpdHlvZmdvZA==">
+    <title>404 - Page Not Found | nullcloud.codehs.me</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="error/type:404/styles.css?v=2">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Fake 404 Page */
+        body.show-404 #fake-404 { display: flex; }
+        body.show-404 #real-content { display: none !important; }
+        body:not(.show-404) #fake-404 { display: none !important; }
+        body:not(.show-404) #real-content { display: block; }
+        
+        #fake-404 {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        #fake-404 main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+        .error-container {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 2rem;
+            text-align: center;
+            width: 100%;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: var(--primary-color, #6C63FF);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        .error-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-dark, #2C3E50);
+        }
+        .error-message {
+            font-size: 1.1rem;
+            color: var(--text-light, #7F8C8D);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .error-btn {
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background: var(--primary-color, #6C63FF);
+            color: white;
+        }
+        .btn-primary:hover {
+            background: var(--primary-hover, #5A52D5);
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color, #6C63FF);
+            border: 2px solid var(--primary-color, #6C63FF);
+        }
+        .btn-secondary:hover {
+            background: var(--primary-color, #6C63FF);
+            color: white;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a25;
+            --accent-primary: #6366f1;
+            --accent-secondary: #8b5cf6;
+            --accent-glow: rgba(99, 102, 241, 0.4);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --border-color: rgba(99, 102, 241, 0.2);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Hub View */
+        #hub-view {
+            display: block;
+        }
+
+        /* Game View */
+        #game-view {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 1000;
+        }
+
+        #game-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        #back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid var(--accent-primary);
+            color: var(--text-primary);
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        #back-btn:hover {
+            background: var(--accent-primary);
+            box-shadow: 0 0 20px var(--accent-glow);
+            transform: translateY(-2px);
+        }
+
+        #back-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Background Effects */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-primary);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .cursor-glow {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, rgba(139, 92, 246, 0.1) 30%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease;
+        }
+
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Header */
+        header {
+            position: relative;
+            z-index: 1;
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 4px;
+            margin-bottom: 16px;
+            text-shadow: 0 0 60px var(--accent-glow);
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .tagline {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            display: block;
+            width: 100%;
+            user-select: none;
+            -webkit-user-select: none;
+            text-align: center;
+        }
+
+        /* Main Container */
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Links Section */
+        .links-section {
+            margin-bottom: 40px;
+            padding: 24px;
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent-primary);
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 12px;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .link-item:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 15px var(--accent-glow);
+            transform: translateY(-2px);
+        }
+
+        .link-item .status {
+            font-size: 0.7rem;
+            margin-left: auto;
+        }
+
+        .link-item.working .status { color: #4ade80; }
+        .link-item.broken .status { color: #f87171; }
+        .link-item.unknown .status { color: #fbbf24; }
+        .link-item.soon .status { color: #a78bfa; }
+
+        /* Dead Links Section */
+        .dead-links-section {
+            margin-top: 60px;
+            padding: 16px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .dead-links-title {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            opacity: 0.5;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .dead-links-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .dead-link {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            opacity: 0.4;
+            text-decoration: none;
+            padding: 4px 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 4px;
+            transition: opacity 0.2s;
+        }
+
+        .dead-link:hover {
+            opacity: 0.7;
+        }
+
+        /* Search Bar */
+        .search-container {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .search-input {
+            flex: 1;
+            min-width: 200px;
+            padding: 12px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .search-input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .search-results-count {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        .game-card.hidden {
+            display: none;
+        }
+
+        /* Feedback Section */
+        .feedback-section {
+            margin-top: 60px;
+            padding: 24px;
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+        }
+
+        .feedback-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent-primary);
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+
+        .feedback-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .feedback-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .form-group {
+            flex: 1;
+            min-width: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-group label {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px 16px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-group select {
+            cursor: pointer;
+        }
+
+        .form-group select option {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        .submit-btn {
+            padding: 14px 28px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            align-self: flex-start;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px var(--accent-glow);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Games Section Title */
+        .games-section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent-primary);
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+
+        /* Games Grid */
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        /* Game Card */
+        .game-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .game-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+
+        .game-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--accent-primary);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.4),
+                0 0 40px var(--accent-glow);
+        }
+
+        .game-card:hover::before {
+            opacity: 0.1;
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 1;
+            padding: 16px;
+        }
+
+        .game-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .game-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 4px 12px;
+            background: rgba(99, 102, 241, 0.15);
+            border-radius: 20px;
+            color: var(--accent-primary);
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            opacity: 0.5;
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 15, 0.95);
+            z-index: 999;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .loading.active {
+            display: flex;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--border-color);
+            border-top-color: var(--accent-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            letter-spacing: 2px;
+        }
+
+        /* Fun Mode Switch */
+        .fun-mode-toggle {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(26, 26, 37, 0.8);
+            padding: 10px 16px;
+            border-radius: 25px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .fun-mode-toggle:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        .fun-mode-toggle span {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .toggle-switch {
+            width: 44px;
+            height: 24px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            position: relative;
+            transition: background 0.3s ease;
+        }
+
+        .toggle-switch::after {
+            content: '';
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background: var(--text-secondary);
+            border-radius: 50%;
+            top: 3px;
+            left: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .fun-mode-toggle.active .toggle-switch {
+            background: var(--accent-primary);
+        }
+
+        .fun-mode-toggle.active .toggle-switch::after {
+            left: 23px;
+            background: white;
+        }
+
+        .fun-mode-toggle.active span {
+            color: var(--accent-primary);
+        }
+
+        /* Fun mode card styles */
+        .game-card.fun-mode {
+            position: fixed;
+            transition: none;
+            z-index: 50;
+        }
+
+        .games-grid.fun-mode-active {
+            position: relative;
+            min-height: 600px;
+        }
+
+        /* Particle effects */
+        .particle {
+            position: fixed;
+            pointer-events: none;
+            border-radius: 50%;
+            z-index: 1000;
+            animation: particleFade 1s ease-out forwards;
+        }
+
+        @keyframes particleFade {
+            0% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(0); }
+        }
+
+        /* Click ripple effect */
+        .ripple {
+            position: fixed;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 999;
+            animation: rippleExpand 0.6s ease-out forwards;
+        }
+
+        @keyframes rippleExpand {
+            0% { width: 0; height: 0; opacity: 1; }
+            100% { width: 200px; height: 200px; opacity: 0; }
+        }
+
+        /* Floating particles background */
+        .floating-particle {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: var(--accent-primary);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.3;
+            animation: floatUp linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.3; }
+            90% { opacity: 0.3; }
+            100% { transform: translateY(-100px) rotate(720deg); opacity: 0; }
+        }
+
+        /* Logo interactive effects */
+        .logo {
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            filter: brightness(1.2);
+        }
+
+        .logo.clicked {
+            animation: logoShake 0.5s ease;
+        }
+
+        @keyframes logoShake {
+            0%, 100% { transform: scale(1.05) rotate(0deg); }
+            25% { transform: scale(1.1) rotate(-3deg); }
+            50% { transform: scale(1.05) rotate(3deg); }
+            75% { transform: scale(1.1) rotate(-2deg); }
+        }
+
+        /* Enhanced card interactions */
+        .game-card {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .game-card .card-content {
+            transition: transform 0.1s ease;
+        }
+
+        .game-card:active {
+            transform: scale(0.98);
+        }
+
+        .game-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            border-radius: 16px;
+        }
+
+        .game-card:hover::after {
+            opacity: 1;
+            animation: shimmer 1.5s ease infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Glitch effect for logo */
+        .logo.glitch {
+            animation: glitch 0.3s ease;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff; }
+            25% { text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff; }
+            50% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; }
+            75% { text-shadow: -2px 2px #ff00ff, 2px -2px #00ffff; }
+            100% { text-shadow: none; }
+        }
+
+        /* Konami code easter egg styles */
+        .rainbow-mode .logo {
+            animation: rainbowText 2s linear infinite;
+        }
+
+        @keyframes rainbowText {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        .rainbow-mode .game-card {
+            animation: rainbowBorder 3s linear infinite;
+        }
+
+        @keyframes rainbowBorder {
+            0% { border-color: #ff0000; }
+            17% { border-color: #ff8000; }
+            33% { border-color: #ffff00; }
+            50% { border-color: #00ff00; }
+            67% { border-color: #0080ff; }
+            83% { border-color: #8000ff; }
+            100% { border-color: #ff0000; }
+        }
+
+        /* Stats counter */
+        .stats-display {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(26, 26, 37, 0.8);
+            padding: 12px 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .stats-display span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stats-display .stat-value {
+            color: var(--accent-primary);
+            font-weight: 600;
+        }
+
+        /* Toast notifications */
+        .toast {
+            position: fixed;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--bg-card);
+            color: var(--text-primary);
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: 1px solid var(--accent-primary);
+            box-shadow: 0 0 20px var(--accent-glow);
+            z-index: 1001;
+            opacity: 0;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 0.75rem;
+            }
+
+            .games-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 40px 20px 20px;
+            }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-primary);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-secondary);
+        }
+    </style>
+</head>
+<body class="show-404">
+    <!-- Fake 404 Page - Exact copy of site's 404.html -->
+    <div id="fake-404">
+    <div class="top-banner">
+    </div>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo-section">
+                <a href="../index.html" class="logo-link">
+                    <img src="error/type:404/logo.png" alt="404" class="logo-img">
+                    <div class="logo-text">
+                        <h1>Null</h1>
+                        <span class="tagline">Void Platform</span>
+                    </div>
+                </a>
+            </div>
+            <ul class="nav-links">
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="error-container">
+            <div class="error-code">404</div>
+            <h1 class="error-title">Page Not Found</h1>
+            <p class="error-message">
+                Oops! The page you're looking for doesn't exist. It might have been moved, deleted, or the URL might be incorrect.
+            </p>
+            <div class="error-actions">
+                <a href="./index.html" class="error-btn btn-primary">Try Again</a>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- Real Content (hidden until 'j' is pressed) -->
+    <div id="real-content">
+    <div class="bg-gradient"></div>
+    <div class="cursor-glow" id="cursor-glow"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- Floating particles container -->
+    <div id="floating-particles"></div>
+
+    <!-- Stats Display -->
+    <div class="stats-display" id="stats-display">
+        <span>🖱️ Clicks: <span class="stat-value" id="click-count">0</span></span>
+        <span>🎮 Games: <span class="stat-value" id="games-played">0</span></span>
+        <span>⏱️ Time: <span class="stat-value" id="time-spent">0:00</span></span>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <div class="loading-text">ІNІTІАӀІZІNG</div>
+    </div>
+
+    <!-- Hub View -->
+    <div id="hub-view">
+        <header>
+            <h1 class="logo">Nullclouԁ Prox:E</h1>
+            <p class="tagline">Null</p>
+            <p class="tagline" style="margin-top: 8px; font-size: 0.75rem; opacity: 0.6;"></p>
+        </header>
+
+        <main class="container">
+            <!-- Links Section -->
+            <div class="links-section">
+                <h2 class="section-title">Ӏіոks:</h2>
+                <div class="links-grid" id="links-grid">
+                    <!-- Links will be dynamically populated from links.json -->
+                    <div class="link-item" style="opacity: 0.5; cursor: default;">
+                        <span>Loading links...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Games Section -->
+            <h2 class="games-section-title">Tооӏs:</h2>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" class="search-input" id="tool-search" placeholder="🔍 Search tools...">
+                <span class="search-results-count" id="search-count"></span>
+            </div>
+            
+            <div class="games-grid" id="games-grid">
+                <!-- Pac-Man -->
+                <div class="game-card" data-game="pacman" data-title="Pac-Man">
+                    <div class="card-content">
+                        <h3 class="game-title">Рас-Mаո</h3>
+                        <div class="game-tags">
+                            <span class="tag">Аrсаԁе</span>
+                            <span class="tag">Сӏаssіс</span>
+                            <span class="tag">Rеtrо</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Undertale -->
+                <div class="game-card" data-game="undertale" data-title="Undertale">
+                    <div class="card-content">
+                        <h3 class="game-title">Սոԁеrtаӏе</h3>
+                        <div class="game-tags">
+                            <span class="tag">RPG</span>
+                            <span class="tag">Ѕtоrу</span>
+                            <span class="tag">Іոԁіе</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bendy -->
+                <div class="game-card" data-game="bendy" data-title="Bendy and the Ink Machine">
+                    <div class="card-content">
+                        <h3 class="game-title">Bеոԁу аոԁ tһе Іոk Mасһіոе</h3>
+                        <div class="game-tags">
+                            <span class="tag">Ноrrоr</span>
+                            <span class="tag">Рսzzӏе</span>
+                            <span class="tag">Аtmоsрһеrіс</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buckshot Roulette -->
+                <div class="game-card" data-game="buckshot" data-title="Buckshot Roulette">
+                    <div class="card-content">
+                        <h3 class="game-title">Bսсkshоt Rоսӏеttе</h3>
+                        <div class="game-tags">
+                            <span class="tag">Ноrrоr</span>
+                            <span class="tag">Ѕtrаtеgу</span>
+                            <span class="tag">Thrіӏӏеr</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fears to Fathom -->
+                <div class="game-card" data-game="fears" data-title="Fears to Fathom Home Alone">
+                    <div class="card-content">
+                        <h3 class="game-title">Fеаrs tо Fаtһоm: Ноmе Аӏоոе</h3>
+                        <div class="game-tags">
+                            <span class="tag">Ноrrоr</span>
+                            <span class="tag">Nаrrаtіνе</span>
+                            <span class="tag">Ѕսsреոsе</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Getting Over It -->
+                <div class="game-card" data-game="gettingoverit" data-title="Getting Over It">
+                    <div class="card-content">
+                        <h3 class="game-title">Gеttіոg Оνеr Іt</h3>
+                        <div class="game-tags">
+                            <span class="tag">Сһаӏӏеոgе</span>
+                            <span class="tag">Рһуsісs</span>
+                            <span class="tag">Rаgе</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- People Playground -->
+                <div class="game-card" data-game="peopleplayground" data-title="People Playground">
+                    <div class="card-content">
+                        <h3 class="game-title">Реорӏе Рӏауgrоսոԁ</h3>
+                        <div class="game-tags">
+                            <span class="tag">Ѕаոԁbох</span>
+                            <span class="tag">Рһуsісs</span>
+                            <span class="tag">Сrеаtіνе</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- R.E.P.O. -->
+                <div class="game-card" data-game="repo" data-title="REPO">
+                    <div class="card-content">
+                        <h3 class="game-title">R.Ε.Р.О.</h3>
+                        <div class="game-tags">
+                            <span class="tag">Асtіоո</span>
+                            <span class="tag">Ѕсі-Fі</span>
+                            <span class="tag">Со-ор</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slime Rancher -->
+                <div class="game-card" data-game="slimerancher" data-title="Slime Rancher">
+                    <div class="card-content">
+                        <h3 class="game-title">Ѕӏіmе Rаոсһеr</h3>
+                        <div class="game-tags">
+                            <span class="tag">Fаrmіոg</span>
+                            <span class="tag">Аԁνеոtսrе</span>
+                            <span class="tag">Rеӏахіոg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Amanda the Adventurer -->
+                <div class="game-card" data-game="amanda" data-title="Amanda the Adventurer">
+                    <div class="card-content">
+                        <h3 class="game-title">Аmаոԁа tһе Аԁνеոtսrеr</h3>
+                        <div class="game-tags">
+                            <span class="tag">Ноrrоr</span>
+                            <span class="tag">Mуstеrу</span>
+                            <span class="tag">Fоսոԁ Fооtаgе</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soundboard -->
+                <div class="game-card" data-game="soundboard" data-title="Soundboard">
+                    <div class="card-content">
+                        <h3 class="game-title">Ѕоսոԁbоаrԁ</h3>
+                        <div class="game-tags">
+                            <span class="tag">Аսԁіо</span>
+                            <span class="tag">Fսո</span>
+                            <span class="tag">Tооӏ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- That's Not My Neighbor -->
+                <div class="game-card" data-game="thatsnotmyneighbor" data-title="Thats Not My Neighbor">
+                    <div class="card-content">
+                        <h3 class="game-title">Tһаt's Nоt Mу Nеіgһbоr</h3>
+                        <div class="game-tags">
+                            <span class="tag">Ноrrоr</span>
+                            <span class="tag">Mуstеrу</span>
+                            <span class="tag">Рսzzӏе</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- A Dance of Fire and Ice -->
+                <div class="game-card" data-game="adofai" data-title="A Dance of Fire and Ice ADOFAI">
+                    <div class="card-content">
+                        <h3 class="game-title">А Ԁаոсе оf Fіrе аոԁ Ісе</h3>
+                        <div class="game-tags">
+                            <span class="tag">Rһуtһm</span>
+                            <span class="tag">Mսsіс</span>
+                            <span class="tag">Сһаӏӏеոgе</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dead Links Section -->
+            <div class="dead-links-section">
+                <div class="dead-links-title">Ԁеаԁ Ӏіոks (mау ոоt wоrk):</div>
+                <div class="dead-links-list">
+                    <a href="https://ut.simmingsibs.com" target="_blank" class="dead-link">Սtоріа</a>
+                    <a href="https://axe.simmingsibs.com" target="_blank" class="dead-link">Ахіоm</a>
+                    <a href="https://tgsc.simmingsibs.com" target="_blank" class="dead-link">TGӀЅС</a>
+                    <a href="https://brmn.simmingsibs.com" target="_blank" class="dead-link">Brоmіոе</a>
+                    <a href="https://central.simmingsibs.com" target="_blank" class="dead-link">Сеոtrаӏ</a>
+                </div>
+            </div>
+
+            <!-- Feedback Section -->
+
+        </main>
+
+        <!-- Fun Mode Toggle -->
+        <div class="fun-mode-toggle" id="fun-toggle">
+            <span>Fսո Mоԁе</span>
+            <div class="toggle-switch"></div>
+        </div>
+    </div>
+
+    <!-- Game View -->
+    <div id="game-view">
+        <button id="back-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Bасk tо Нսb
+        </button>
+        <iframe id="game-frame" allow="autoplay; fullscreen; pointer-lock" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        // Game configurations - using local game files
+        const games = {
+            pacman: {
+                url: 'games/q7x2m9k4.html'
+            },
+            undertale: {
+                url: 'games/w3p8n1v6.html'
+            },
+            bendy: {
+                url: 'games/r5t0y2h8.html'
+            },
+            buckshot: {
+                url: 'games/j4c9f1l3.html'
+            },
+            fears: {
+                url: 'games/b6z7d0g5.html'
+            },
+            gettingoverit: {
+                url: 'games/s8a2e4i9.html'
+            },
+            peopleplayground: {
+                url: 'games/u1o3m7k6.html'
+            },
+            repo: {
+                url: 'games/x5v9n2p4.html'
+            },
+            slimerancher: {
+                url: 'games/h0l8c3f7.html'
+            },
+            amanda: {
+                url: 'games/y6t1r9w2.html'
+            },
+            soundboard: {
+                url: 'games/m3k7p2n9.html'
+            },
+            thatsnotmyneighbor: {
+                url: 'games/v8r4t6x1.html'
+            },
+            adofai: {
+                url: 'games/c2f5w0j8.html'
+            }
+        };
+
+        const hubView = document.getElementById('hub-view');
+        const gameView = document.getElementById('game-view');
+        const gameFrame = document.getElementById('game-frame');
+        const backBtn = document.getElementById('back-btn');
+        const loading = document.getElementById('loading');
+
+        // Search functionality
+        const searchInput = document.getElementById('tool-search');
+        const searchCount = document.getElementById('search-count');
+        const allGameCards = document.querySelectorAll('.game-card');
+
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase().trim();
+                let visibleCount = 0;
+
+                allGameCards.forEach(card => {
+                    const title = (card.dataset.title || '').toLowerCase();
+                    const tags = card.querySelectorAll('.tag');
+                    let tagText = '';
+                    tags.forEach(tag => tagText += ' ' + tag.textContent.toLowerCase());
+
+                    if (query === '' || title.includes(query) || tagText.includes(query)) {
+                        card.classList.remove('hidden');
+                        visibleCount++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+
+                if (query && searchCount) {
+                    searchCount.textContent = `${visibleCount} result${visibleCount !== 1 ? 's' : ''}`;
+                } else if (searchCount) {
+                    searchCount.textContent = '';
+                }
+            });
+        }
+
+        // Handle game card clicks
+        document.querySelectorAll('.game-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const gameId = card.dataset.game;
+                const game = games[gameId];
+                
+                if (game) {
+                    loading.classList.add('active');
+                    
+                    setTimeout(() => {
+                        hubView.style.display = 'none';
+                        gameView.style.display = 'block';
+                        gameFrame.src = game.url;
+                        loading.classList.remove('active');
+                    }, 500);
+                }
+            });
+        });
+
+        // Handle back button
+        backBtn.addEventListener('click', () => {
+            gameFrame.src = '';
+            gameView.style.display = 'none';
+            hubView.style.display = 'block';
+        });
+
+        // Handle escape key to go back
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && gameView.style.display === 'block') {
+                backBtn.click();
+            }
+        });
+
+        // Cursor glow effect
+        const cursorGlow = document.getElementById('cursor-glow');
+        let mouseX = 0;
+        let mouseY = 0;
+        
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursorGlow.style.left = e.clientX + 'px';
+            cursorGlow.style.top = e.clientY + 'px';
+        });
+
+        // Hide glow when mouse leaves window
+        document.addEventListener('mouseleave', () => {
+            cursorGlow.style.opacity = '0';
+        });
+
+        document.addEventListener('mouseenter', () => {
+            cursorGlow.style.opacity = '1';
+        });
+
+        // Fun Mode
+        const funToggle = document.getElementById('fun-toggle');
+        const gamesGrid = document.querySelector('.games-grid');
+        const gameCards = document.querySelectorAll('.game-card');
+        const logoEl = document.querySelector('.logo');
+        const taglineEl = document.querySelector('.tagline');
+        let funModeActive = false;
+        let physicsObjects = []; // All objects: cards + header elements
+        let objectPositions = [];
+        let objectVelocities = [];
+        let objectSizes = [];
+        let animationId = null;
+
+        funToggle.addEventListener('click', () => {
+            funModeActive = !funModeActive;
+            funToggle.classList.toggle('active', funModeActive);
+            
+            if (funModeActive) {
+                enableFunMode();
+            } else {
+                disableFunMode();
+            }
+        });
+
+        // Static collision objects (header elements) - they don't move but block cards
+        let staticObjects = [];
+        let staticPositions = [];
+        let staticSizes = [];
+
+        function enableFunMode() {
+            // Game cards are movable physics objects
+            physicsObjects = [...gameCards];
+            
+            // Header elements are static collision obstacles
+            staticObjects = [logoEl, taglineEl];
+            
+            // Capture static object positions
+            staticObjects.forEach((obj, i) => {
+                const rect = obj.getBoundingClientRect();
+                staticPositions[i] = { x: rect.left, y: rect.top };
+                staticSizes[i] = { width: rect.width, height: rect.height };
+            });
+            
+            // Find max card height for uniform sizing
+            let maxCardHeight = 0;
+            gameCards.forEach((card) => {
+                const rect = card.getBoundingClientRect();
+                if (rect.height > maxCardHeight) maxCardHeight = rect.height;
+            });
+            
+            // Capture initial positions for game cards (relative to viewport)
+            physicsObjects.forEach((obj, i) => {
+                const rect = obj.getBoundingClientRect();
+                objectPositions[i] = { x: rect.left, y: rect.top };
+                objectVelocities[i] = { x: 0, y: 0 };
+                objectSizes[i] = { width: rect.width, height: maxCardHeight };
+            });
+            
+            // Apply fun mode class to grid for CSS
+            gamesGrid.classList.add('fun-mode-active');
+            document.body.classList.add('fun-mode-active');
+            
+            // Apply positions and styles to game cards only
+            physicsObjects.forEach((obj, i) => {
+                obj.style.width = objectSizes[i].width + 'px';
+                obj.style.height = objectSizes[i].height + 'px';
+                obj.style.left = objectPositions[i].x + 'px';
+                obj.style.top = objectPositions[i].y + 'px';
+                obj.classList.add('fun-mode');
+            });
+            
+            animationId = requestAnimationFrame(updateFunMode);
+        }
+
+        function disableFunMode() {
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+                animationId = null;
+            }
+            
+            // Keep objects in their current positions - don't reset anything
+            // Just stop the animation loop
+        }
+
+        function updateFunMode() {
+            if (!funModeActive) return;
+            
+            // Use window as the play area
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+            const cursorRadius = 50;
+            const pushStrength = 12;
+            const friction = 0.85;
+            const bounce = 0.5;
+            const padding = 10;
+            
+            // Only apply cursor forces to game cards (not header)
+            physicsObjects.forEach((obj, i) => {
+                const objCenterX = objectPositions[i].x + objectSizes[i].width / 2;
+                const objCenterY = objectPositions[i].y + objectSizes[i].height / 2;
+                
+                const dx = objCenterX - mouseX;
+                const dy = objCenterY - mouseY;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                const pushRadius = cursorRadius + Math.max(objectSizes[i].width, objectSizes[i].height) / 2;
+                
+                if (distance < pushRadius && distance > 0) {
+                    const force = (pushRadius - distance) / pushRadius * pushStrength;
+                    objectVelocities[i].x += (dx / distance) * force;
+                    objectVelocities[i].y += (dy / distance) * force;
+                }
+            });
+            
+            // Apply velocities to game cards only
+            physicsObjects.forEach((obj, i) => {
+                objectVelocities[i].x *= friction;
+                objectVelocities[i].y *= friction;
+                objectPositions[i].x += objectVelocities[i].x;
+                objectPositions[i].y += objectVelocities[i].y;
+            });
+            
+            // Hard collision resolution
+            for (let iter = 0; iter < 5; iter++) {
+                // Card-to-card collision
+                for (let i = 0; i < physicsObjects.length; i++) {
+                    for (let j = i + 1; j < physicsObjects.length; j++) {
+                        const ax = objectPositions[i].x;
+                        const ay = objectPositions[i].y;
+                        const aw = objectSizes[i].width;
+                        const ah = objectSizes[i].height;
+                        
+                        const bx = objectPositions[j].x;
+                        const by = objectPositions[j].y;
+                        const bw = objectSizes[j].width;
+                        const bh = objectSizes[j].height;
+                        
+                        const overlapX = Math.min(ax + aw, bx + bw) - Math.max(ax, bx);
+                        const overlapY = Math.min(ay + ah, by + bh) - Math.max(ay, by);
+                        
+                        if (overlapX > 0 && overlapY > 0) {
+                            if (overlapX < overlapY) {
+                                const separation = overlapX / 2 + 1;
+                                if (ax < bx) {
+                                    objectPositions[i].x -= separation;
+                                    objectPositions[j].x += separation;
+                                } else {
+                                    objectPositions[i].x += separation;
+                                    objectPositions[j].x -= separation;
+                                }
+                                const avgVelX = (objectVelocities[i].x + objectVelocities[j].x) / 2;
+                                objectVelocities[i].x = avgVelX * bounce;
+                                objectVelocities[j].x = avgVelX * bounce;
+                            } else {
+                                const separation = overlapY / 2 + 1;
+                                if (ay < by) {
+                                    objectPositions[i].y -= separation;
+                                    objectPositions[j].y += separation;
+                                } else {
+                                    objectPositions[i].y += separation;
+                                    objectPositions[j].y -= separation;
+                                }
+                                const avgVelY = (objectVelocities[i].y + objectVelocities[j].y) / 2;
+                                objectVelocities[i].y = avgVelY * bounce;
+                                objectVelocities[j].y = avgVelY * bounce;
+                            }
+                        }
+                    }
+                }
+                
+                // Card-to-static-header collision (cards bounce off header, header doesn't move)
+                for (let i = 0; i < physicsObjects.length; i++) {
+                    for (let s = 0; s < staticObjects.length; s++) {
+                        const ax = objectPositions[i].x;
+                        const ay = objectPositions[i].y;
+                        const aw = objectSizes[i].width;
+                        const ah = objectSizes[i].height;
+                        
+                        const bx = staticPositions[s].x;
+                        const by = staticPositions[s].y;
+                        const bw = staticSizes[s].width;
+                        const bh = staticSizes[s].height;
+                        
+                        const overlapX = Math.min(ax + aw, bx + bw) - Math.max(ax, bx);
+                        const overlapY = Math.min(ay + ah, by + bh) - Math.max(ay, by);
+                        
+                        if (overlapX > 0 && overlapY > 0) {
+                            // Only move the card, not the static object
+                            if (overlapX < overlapY) {
+                                if (ax < bx) {
+                                    objectPositions[i].x -= overlapX + 1;
+                                } else {
+                                    objectPositions[i].x += overlapX + 1;
+                                }
+                                objectVelocities[i].x *= -bounce;
+                            } else {
+                                if (ay < by) {
+                                    objectPositions[i].y -= overlapY + 1;
+                                } else {
+                                    objectPositions[i].y += overlapY + 1;
+                                }
+                                objectVelocities[i].y *= -bounce;
+                            }
+                        }
+                    }
+                }
+                
+                // Window boundary collision
+                physicsObjects.forEach((obj, i) => {
+                    const maxX = windowWidth - objectSizes[i].width - padding;
+                    const maxY = windowHeight - objectSizes[i].height - padding;
+                    
+                    if (objectPositions[i].x < padding) {
+                        objectPositions[i].x = padding;
+                        objectVelocities[i].x *= -bounce;
+                    } else if (objectPositions[i].x > maxX) {
+                        objectPositions[i].x = maxX;
+                        objectVelocities[i].x *= -bounce;
+                    }
+                    
+                    if (objectPositions[i].y < padding) {
+                        objectPositions[i].y = padding;
+                        objectVelocities[i].y *= -bounce;
+                    } else if (objectPositions[i].y > maxY) {
+                        objectPositions[i].y = maxY;
+                        objectVelocities[i].y *= -bounce;
+                    }
+                });
+            }
+            
+            // Apply final positions to game cards only
+            physicsObjects.forEach((obj, i) => {
+                obj.style.left = objectPositions[i].x + 'px';
+                obj.style.top = objectPositions[i].y + 'px';
+            });
+            
+            animationId = requestAnimationFrame(updateFunMode);
+        }
+
+        // ==========================================
+        // INTERACTIVE FEATURES
+        // ==========================================
+
+        // Stats tracking
+        let clickCount = 0;
+        let gamesPlayed = 0;
+        let startTime = Date.now();
+        const clickCountEl = document.getElementById('click-count');
+        const gamesPlayedEl = document.getElementById('games-played');
+        const timeSpentEl = document.getElementById('time-spent');
+
+        // Update time display
+        setInterval(() => {
+            const elapsed = Math.floor((Date.now() - startTime) / 1000);
+            const mins = Math.floor(elapsed / 60);
+            const secs = elapsed % 60;
+            if (timeSpentEl) timeSpentEl.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+        }, 1000);
+
+        // Toast notification system
+        function showToast(message, duration = 3000) {
+            const toast = document.getElementById('toast');
+            if (!toast) return;
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), duration);
+        }
+
+        // Click counter (no annoying effects)
+        document.addEventListener('click', (e) => {
+            clickCount++;
+            if (clickCountEl) clickCountEl.textContent = clickCount;
+        });
+
+        // Floating background particles
+        function createFloatingParticles() {
+            const container = document.getElementById('floating-particles');
+            if (!container) return;
+            
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const particle = document.createElement('div');
+                    particle.className = 'floating-particle';
+                    particle.style.left = Math.random() * 100 + 'vw';
+                    particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                    particle.style.animationDelay = (Math.random() * 5) + 's';
+                    container.appendChild(particle);
+                }, i * 500);
+            }
+        }
+        createFloatingParticles();
+
+        // Logo click interaction
+        if (logoEl) {
+            logoEl.addEventListener('click', () => {
+                logoEl.classList.add('clicked');
+                logoEl.classList.add('glitch');
+                setTimeout(() => {
+                    logoEl.classList.remove('clicked');
+                    logoEl.classList.remove('glitch');
+                }, 500);
+            });
+        }
+
+        // 3D tilt effect on game cards
+        document.querySelectorAll('.game-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                if (card.classList.contains('fun-mode')) return;
+                
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                card.querySelector('.card-content').style.transform = 
+                    `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.querySelector('.card-content').style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+            });
+        });
+
+        // Track games played
+        const originalGameCardHandlers = [];
+        document.querySelectorAll('.game-card').forEach(card => {
+            card.addEventListener('click', () => {
+                gamesPlayed++;
+                if (gamesPlayedEl) gamesPlayedEl.textContent = gamesPlayed;
+            });
+        });
+
+        // Konami Code Easter Egg
+        const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+        let konamiIndex = 0;
+        let rainbowMode = false;
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === konamiCode[konamiIndex]) {
+                konamiIndex++;
+                if (konamiIndex === konamiCode.length) {
+                    konamiIndex = 0;
+                    rainbowMode = !rainbowMode;
+                    document.body.classList.toggle('rainbow-mode', rainbowMode);
+                }
+            } else {
+                konamiIndex = 0;
+            }
+        });
+
+        // Double-click card to favorite (visual only)
+        document.querySelectorAll('.game-card').forEach(card => {
+            card.addEventListener('dblclick', (e) => {
+                e.stopPropagation();
+                card.style.boxShadow = card.style.boxShadow.includes('gold') 
+                    ? '' 
+                    : '0 0 20px gold, inset 0 0 20px rgba(255, 215, 0, 0.1)';
+            });
+        });
+
+        // Link hover sound effect (visual pulse)
+        document.querySelectorAll('.link-item').forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                link.style.transform = 'translateY(-2px) scale(1.02)';
+            });
+            link.addEventListener('mouseleave', () => {
+                link.style.transform = '';
+            });
+        });
+
+        // Form submission handler
+        const feedbackForm = document.getElementById('feedback-form');
+        if (feedbackForm) {
+            feedbackForm.addEventListener('submit', function(e) {
+                const btn = feedbackForm.querySelector('.submit-btn');
+                btn.textContent = 'Ѕеոԁіոg...';
+                btn.disabled = true;
+            });
+        }
+
+        // Attribution verification - DO NOT REMOVE
+        (function() {
+            const _0x4a2b = ['636f726e63697479', '6f66676f64'];
+            const _creator = String.fromCharCode(78,117,108,108,67,108,111,117,100);
+
+            const _verify = () => {
+                const meta = document.querySelector('meta[name="creator"]');
+                const header = document.querySelector('#hub-view header');
+                const existingCredit = header ? Array.from(header.querySelectorAll('.tagline')).find(el => el.textContent.includes(_creator)) : null;
+                
+                if (!meta || !existingCredit) {
+                    console.warn('%c⚠ Attribution Required', 'color: #ff6b6b; font-size: 14px; font-weight: bold;');
+                    console.log('%cThis project was created by ' + _creator, 'color: #4ecdc4; font-size: 12px;');
+                    
+                    // Restore credit if removed (only if it doesn't exist)
+                    if (header && !existingCredit && !header.querySelector('.creator-credit')) {
+                        const creditLine = document.createElement('p');
+                        creditLine.className = 'tagline creator-credit';
+                        creditLine.style.cssText = 'margin-top: 8px; font-size: 0.75rem; opacity: 0.6;';
+                        creditLine.textContent = 'By ' + _creator;
+                        header.appendChild(creditLine);
+                    }
+                }
+            };
+            _verify();
+            setInterval(_verify, 30000);
+            // Mutation observer to detect removal
+            const observer = new MutationObserver(_verify);
+            observer.observe(document.body, { childList: true, subtree: true });
+        })();
+
+        // Additional obfuscated reference
+        window._attribution = {
+            v: 'MTIz',
+            a: atob('Y29ybmNpdHlvZmdvZA=='),
+            t: Date.now()
+        };
+
+        // ==========================================
+        // LINK DISPENSER LOGIC
+        // ==========================================
+        
+        // Storage keys for tracking requested links per service
+        const STORAGE_KEY = 'linkDispenser_requested';
+        
+        // Get requested links from localStorage
+        function getRequestedLinks() {
+            try {
+                const data = localStorage.getItem(STORAGE_KEY);
+                return data ? JSON.parse(data) : {};
+            } catch (e) {
+                return {};
+            }
+        }
+        
+        // Save requested links to localStorage
+        function saveRequestedLinks(requested) {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(requested));
+            } catch (e) {
+                console.warn('Could not save to localStorage');
+            }
+        }
+        
+        // Dispense a link for a given service
+        function dispenseLink(serviceName, allLinks) {
+            // Get all links for this service
+            const serviceLinks = allLinks[serviceName] || [];
+            
+            // If no links available for this service, return null
+            if (serviceLinks.length === 0) {
+                return null;
+            }
+            
+            // Get user's previously requested links
+            const requested = getRequestedLinks();
+            
+            // Initialize service tracking if not exists
+            if (!requested[serviceName]) {
+                requested[serviceName] = [];
+            }
+            
+            // Filter out previously received links
+            let availableLinks = serviceLinks.filter(link => !requested[serviceName].includes(link));
+            
+            // If all links have been received, recycle (reset)
+            if (availableLinks.length === 0) {
+                // Reset - user can now receive duplicates
+                requested[serviceName] = [];
+                availableLinks = [...serviceLinks];
+            }
+            
+            // Select a random link from available pool
+            const selectedLink = availableLinks[Math.floor(Math.random() * availableLinks.length)];
+            
+            // Add to requested history
+            requested[serviceName].push(selectedLink);
+            saveRequestedLinks(requested);
+            
+            return selectedLink;
+        }
+        
+        // Load links.json and populate the links grid
+        async function initLinkDispenser() {
+            const linksGrid = document.getElementById('links-grid');
+            if (!linksGrid) return;
+            
+            // Embedded fallback data in case fetch fails (file:// protocol issue)
+            const fallbackLinksData = {
+                "Index": ["https://index.simmingsibs.com"],
+                "DayDreamX": ["https://dream.simmingsibs.com"],
+                "Space": ["https://iss.simmingsibs.com"],
+                "Doge": ["https://dog.simmingsibs.com/"],
+                "Alura": ["https://alu.simmingsibs.com/", "https://s3.amazonaws.com/aluramathwork/index.html"],
+                "Petezah": ["https://pet.simmingsibs.com"],
+                "Endis": ["https://end.simmingsibs.com/"],
+                "GN": ["https://fr.simmingsibs.com", "https://en.simmingsibs.com", "https://gn1-eduindex-17326539.codehs.me/", "https://script.google.com/macros/s/AKfycbx1ZX55e0YQQgP511DzqcIl5cSEAgqMBgvZNbrYSSVuGv-Q7_VZWb7fla-qraRT_eZotw/exec", "https://idkbro-fc9f3.web.app/", "https://prageru-server.s3.amazonaws.com/mathematics.html", "https://s3.amazonaws.com/prageru-server/mathematics.html"],
+                "Frogie's Arcade": ["https://frg.simmingsibs.com/", "https://ixl.rocks", "https://ixl.works", "https://smdpschool.org/"],
+                "Nowgg.fun": ["https://nwg.simmingsibs.com"],
+                "Truffled": ["https://trf.simmingsibs.com/"],
+                "Galaxy": ["https://galxy.simmingsibs.com/", "https://maplesyrup.canadianlocomotivelogistics.ca/onboarding/"],
+                "Velara": ["https://vel.simmingsibs.com/", "https://fishbait.kilanda-hult.se/"],
+                "Fern": ["https://frn.simmingsibs.com/", "https://buildmyplays.org/"],
+                "Portal": ["https://simmingsibs.com/xkcd7f8g9h2j3k4l5m6n7p8q9r0s1t2u3v4w5x6y7z8a9b0c1d2e3f4g5h6j7k8l9m0n1p2q3r4s5t6u7v8w9/lIzvjoBba67GoWJ1ZggA"],
+                "Central": ["https://central.simmingsibs.com"],
+                "Working AI": ["https://art.simmingsibs.com"],
+                "Sakura": ["https://japan.simmingsibs.com/"],
+                "Duckmath": ["https://duck.geometrystudy.com/"],
+                "UGS": ["https://singlefile8hj2r-17243851.codehs.me/"],
+                "Vortex": ["https://ixlmathlearningforkids.lbry.ru/"],
+                "Shadow": ["https://smartenglish.lbry.ru/"],
+                "Glitchcore": ["https://glitchcore-2-16134423.codehs.me/index.html"],
+                "Quasant": ["https://wadsworthyouthbasketball.org/", "https://contact.stemspaceclub.com/"],
+                "Amathyst": ["https://test-17305523.codehs.me/"],
+            };
+            
+            // Use embedded links data directly (works in about:blank)
+            const linksData = fallbackLinksData;
+            
+            try {
+                // Clear loading message
+                linksGrid.innerHTML = '';
+                
+                // Create a button for each service that has links
+                for (const [serviceName, links] of Object.entries(linksData)) {
+                    // Only show services that have at least one link
+                    if (links && links.length > 0) {
+                        const linkItem = document.createElement('div');
+                        linkItem.className = 'link-item working';
+                        linkItem.style.cursor = 'pointer';
+                        linkItem.dataset.service = serviceName;
+                        
+                        linkItem.innerHTML = `
+                            <span>${serviceName}</span>
+                            <span class="status">✓</span>
+                        `;
+                        
+                        // Click handler to dispense a link
+                        linkItem.addEventListener('click', () => {
+                            const link = dispenseLink(serviceName, linksData);
+                            if (link) {
+                                // Check if this link should open directly instead of in about:blank
+                                const directOpenDomains = [
+                                    'ixlmathlearningforkids.lbry.ru',
+                                    'singlefile8hj2r-17243851.codehs.me',
+                                    'fishbait.kilanda-hult.se',
+                                    'glitchcore-2-16134423.codehs.me',
+                                    'gn1-eduindex-17326539.codehs.me',
+                                    'script.google.com/macros/s/AKfycbx1ZX55e0YQQgP511DzqcIl5cSEAgqMBgvZNbrYSSVuGv-Q7_VZWb7fla-qraRT_eZotw/exec'
+                                ];
+                                
+                                const shouldOpenDirectly = directOpenDomains.some(domain => link.includes(domain));
+                                
+                                if (shouldOpenDirectly) {
+                                    // Open directly in the actual URL
+                                    window.open(link, '_blank');
+                                } else {
+                                    // Open the dispensed link in about:blank for better cloaking
+                                    const newWindow = window.open('about:blank', '_blank');
+                                    if (newWindow) {
+                                        newWindow.document.write(`
+                                            <!DOCTYPE html>
+                                            <html>
+                                            <head>
+                                                <title>Dashboard</title>
+                                                <style>
+                                                    body { margin: 0; padding: 0; overflow: hidden; }
+                                                    iframe { border: none; width: 100vw; height: 100vh; }
+                                                </style>
+                                            </head>
+                                            <body>
+                                                <iframe src="${link}"></iframe>
+                                            </body>
+                                            </html>
+                                        `);
+                                        newWindow.document.close();
+                                    }
+                                }
+                                showToast(`Opened link for ${serviceName}`);
+                            } else {
+                                showToast(`No links available for ${serviceName}`);
+                            }
+                        });
+                        
+                        linksGrid.appendChild(linkItem);
+                    }
+                }
+                
+                // If no services with links were found
+                if (linksGrid.children.length === 0) {
+                    linksGrid.innerHTML = '<div class="link-item" style="opacity: 0.5; cursor: default;"><span>No links available</span></div>';
+                }
+                
+            } catch (error) {
+                console.error('Error initializing links:', error);
+                linksGrid.innerHTML = `
+                    <div class="link-item" style="opacity: 0.5; cursor: default; grid-column: 1 / -1;">
+                        <span>Error initializing links: ${error.message}</span>
+                    </div>
+                `;
+            }
+        }
+        
+        // Initialize link dispenser when DOM is ready
+        initLinkDispenser();
+    </script>
+    </div><!-- Created by NullCloud - End real-content -->
+
+    <script>
+        // Secret key to open real page in about:blank
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'j' || e.key === 'J') {
+                // Get the full HTML content
+                const realContent = document.getElementById('real-content');
+                const _c = String.fromCharCode(99,111,114,110,99,105,116,121,111,102,103,111,100);
+                const fullHTML = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="${_c}">
+    <title>Εԁսсаtіоոаӏ Іոԁех</title>
+    ${document.head.innerHTML}
+    <style>
+        body.show-404 #fake-404 { display: none !important; }
+        #fake-404 { display: none !important; }
+        #real-content { display: block !important; }
+    </style>
+</head>
+<body>
+    ${realContent.innerHTML}
+    <!-- ${_c} -->
+</body>
+</html>`;
+                
+                // Open in about:blank
+                const newWindow = window.open('about:blank', '_blank');
+                if (newWindow) {
+                    newWindow.document.write(fullHTML);
+                    newWindow.document.close();
+                }
+            }
+        });
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"2d8b5bd0dcc74b3088688791247de9fa","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+<!-- (c) Null -->
+</html>
